@@ -10,7 +10,7 @@ One app, `stirling-pdf`, on the place `stirling-pdf`, behind `org`. Edgible's lo
 
 The image is `stirlingtools/stirling-pdf:3.1.0`, about 1.1 GB, with OCR and office-document conversion. The `3.1.0-ultra-lite` tag is about 360 MB and leaves those out; change the image line if that is all you need.
 
-It keeps settings in the volume `stirling-pdf-config`, OCR languages in `stirling-pdf-tessdata`, and logs in `stirling-pdf-logs`. Documents you process are not stored.
+It keeps settings in the volume `stirling-pdf-config`, OCR languages in `stirling-pdf-tessdata`, and logs in `stirling-pdf-logs`. Documents you process are not stored. Minimum recommended for the place `stirling-pdf`: 2 GB of memory and 2.5 GB of disk, on an arm64 or amd64 machine, with no GPU.
 
 To use it in a card, copy the `stirling-pdf` service and its three volumes into the card's Compose file, and `STIRLING_PDF_PORT` into its `card.env`. The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 
