@@ -25,3 +25,10 @@ applications:
     published: true
     authModes: [none]
     place: umami
+
+places:
+  umami:
+    memory: 384 MB
+    disk: 1.5 GB
+    arch: [amd64, arm64]
+    gpu: none

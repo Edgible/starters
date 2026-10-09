@@ -1,4 +1,4 @@
-tested: 2026-10-09
+tested: 2026-10-10
 result: pass
 card-kit: 2de17c3
 edgible-cli: 1.4.6
@@ -14,6 +14,11 @@ steps:
     umami: pass
     analytics: pass
   teardown: pass
+measured:
+  umami:
+    memory: 218 MB
+    images: 435 MB
+    data: 50 MB
 duration: 3m
 by: agent
 notes: umami is taken in the test org, so it was published as test-umami.

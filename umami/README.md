@@ -12,7 +12,7 @@ The `analytics` hostname serves the whole Umami process, so its login page is pu
 
 To use it in a card, copy the `umami` and `umami-db` services, the volume, and the four `UMAMI_` lines in `card.env`, then put the tracking snippet from the dashboard into your site with the `analytics` hostname.
 
-Page views, sites and accounts live in the volume `umami-db-data`.
+Page views, sites and accounts live in the volume `umami-db-data`. Minimum recommended for the place `umami`: 384 MB of memory and 1.5 GB of disk, on an arm64 or amd64 machine, with no GPU.
 
 The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 
