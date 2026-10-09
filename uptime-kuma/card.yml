@@ -14,3 +14,10 @@ applications:
     published: true
     authModes: [org]
     place: uptime-kuma
+
+places:
+  uptime-kuma:
+    memory: 256 MB
+    disk: 1.5 GB
+    arch: [amd64, arm, arm64]
+    gpu: none
