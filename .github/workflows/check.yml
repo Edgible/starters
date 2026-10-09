@@ -1,0 +1,23 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Edgible/card-kit
+          path: .card-kit
+      - name: check-cards
+        run: |
+          # Nothing to check until the first starter lands.
+          if ls */card.yml >/dev/null 2>&1; then .card-kit/run check-cards; else echo "no starters yet"; fi
