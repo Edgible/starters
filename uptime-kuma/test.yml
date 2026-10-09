@@ -1,0 +1,16 @@
+tested: 2026-10-09
+result: pass
+card-kit: 2de17c3
+edgible-cli: 1.4.6
+machine: darwin/arm64, docker 29.4.3
+images:
+  - louislam/uptime-kuma:2.5.5-slim@sha256:9c56a772a7df53f444a404c579e87a27bd0c201375d00d6745a75bf8138f4342
+steps:
+  check-env: pass
+  start: pass
+  publish: pass
+  verify:
+    uptime-kuma: pass
+  teardown: pass
+duration: 2m
+by: agent

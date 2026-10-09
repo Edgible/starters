@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Card
+metadata:
+  name: uptime-kuma
+  description: Uptime Kuma, the uptime monitor, behind your org login
+
+applications:
+  - name: uptime-kuma
+    what: Uptime Kuma monitors and status pages
+    from: louislam/uptime-kuma:2.5.5-slim
+    port: 3001
+    protocol: https
+    subtype: existing
+    published: true
+    authModes: [org]
+    place: uptime-kuma
