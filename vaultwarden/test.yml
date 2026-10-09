@@ -1,4 +1,4 @@
-tested: 2026-10-09
+tested: 2026-10-10
 result: pass
 card-kit: 2de17c3
 edgible-cli: 1.4.6
@@ -12,5 +12,10 @@ steps:
   verify:
     vaultwarden: pass
   teardown: pass
+measured:
+  vaultwarden:
+    memory: 9 MB
+    images: 91 MB
+    data: 324 KB
 duration: 3m
 by: agent

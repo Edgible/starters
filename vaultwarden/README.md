@@ -12,7 +12,7 @@ Vaultwarden must know its own address, so `DOMAIN` is `https://vaultwarden.<ORG_
 
 The admin token here is a long random string. Vaultwarden also accepts an Argon2 hash of it (`docker run --rm -it vaultwarden/server:1.37.4 /vaultwarden hash`), which it recommends; in `card.env`, write each `$` in the hash as `$$`.
 
-Vaults, attachments and settings live in the volume `vaultwarden-data`. Back it up; it holds everyone's encrypted vault.
+Vaults, attachments and settings live in the volume `vaultwarden-data`. Back it up; it holds everyone's encrypted vault. Minimum recommended for the place `vaultwarden`: 256 MB of memory and 1.5 GB of disk, on an arm64, amd64 or 32-bit arm machine, with no GPU.
 
 The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 
