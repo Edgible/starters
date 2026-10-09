@@ -15,3 +15,10 @@ applications:
     published: true
     authModes: [none]
     place: wordpress
+
+places:
+  wordpress:
+    memory: 384 MB
+    disk: 2 GB
+    arch: [amd64, arm64]
+    gpu: none

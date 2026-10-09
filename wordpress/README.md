@@ -12,7 +12,7 @@ WordPress keeps its address in its settings, so `WP_HOME` and `WP_SITEURL` are `
 
 The images are `wordpress:7.1.3-php8.3-apache`, `mariadb:11.8.9`, and `wordpress:cli-2.12.0-php8.3`. To use it in a card, copy the three services, the `x-wordpress-env` block, the two volumes, and the `WORDPRESS_` lines.
 
-Themes, plugins and uploads live in the volume `wordpress-files`, and posts, pages and users in `wordpress-db-data`.
+Themes, plugins and uploads live in the volume `wordpress-files`, and posts, pages and users in `wordpress-db-data`. Minimum recommended for the place `wordpress`: 384 MB of memory and 2 GB of disk, on an arm64 or amd64 machine, with no GPU.
 
 The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 
