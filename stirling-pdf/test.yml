@@ -1,0 +1,17 @@
+tested: 2026-10-09
+result: pass
+card-kit: 2de17c3
+edgible-cli: 1.4.6
+machine: darwin/arm64, docker 29.4.3
+images:
+  - stirlingtools/stirling-pdf:3.1.0@sha256:b5b9e400c086e5334a4947a0d7cd589808f743f29267d7f41c18200cf4bc48b4
+steps:
+  check-env: pass
+  start: pass
+  publish: pass
+  verify:
+    stirling-pdf: pass
+  teardown: pass
+duration: 10m
+by: agent
+notes: Start took six minutes, nearly all of it the first download of the 1.1 GB image.
