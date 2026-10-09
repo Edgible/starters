@@ -1,0 +1,19 @@
+tested: 2026-10-09
+result: pass
+card-kit: 2de17c3
+edgible-cli: 1.4.6
+machine: darwin/arm64, docker 29.4.3
+images:
+  - ghcr.io/umami-software/umami:3.4.0@sha256:85909afc45bdcda1917394594a087421fdbb05610fded0fa9f6fb861abb2f367
+  - postgres:17.11-alpine@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24
+steps:
+  check-env: pass
+  start: pass
+  publish: pass
+  verify:
+    umami: pass
+    analytics: pass
+  teardown: pass
+duration: 3m
+by: agent
+notes: umami is taken in the test org, so it was published as test-umami.
