@@ -10,7 +10,7 @@ One app, `uptime-kuma`, on the place `uptime-kuma`, behind `org`. The image is `
 
 A monitor on the same machine as what it watches cannot report that machine going down. Put this starter on a different serving device from the services it checks. To use it in a card, copy the `uptime-kuma` service and its volume, and `UPTIME_KUMA_PORT`, and give it its own place.
 
-Monitors, settings and history live in the volume `uptime-kuma-data`.
+Monitors, settings and history live in the volume `uptime-kuma-data`. Minimum recommended for the place `uptime-kuma`: 256 MB of memory and 1.5 GB of disk, on an arm64, amd64 or 32-bit arm machine, with no GPU.
 
 The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 

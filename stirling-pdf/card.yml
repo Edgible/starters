@@ -14,3 +14,10 @@ applications:
     published: true
     authModes: [org]
     place: stirling-pdf
+
+places:
+  stirling-pdf:
+    memory: 2 GB
+    disk: 2.5 GB
+    arch: [amd64, arm64]
+    gpu: none

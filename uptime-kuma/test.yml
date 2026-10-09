@@ -1,4 +1,4 @@
-tested: 2026-10-09
+tested: 2026-10-10
 result: pass
 card-kit: 2de17c3
 edgible-cli: 1.4.6
@@ -12,5 +12,10 @@ steps:
   verify:
     uptime-kuma: pass
   teardown: pass
+measured:
+  uptime-kuma:
+    memory: 151 MB
+    images: 180 MB
+    data: 16 KB
 duration: 2m
 by: agent
