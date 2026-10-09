@@ -1,4 +1,4 @@
-tested: 2026-10-09
+tested: 2026-10-10
 result: pass
 card-kit: 2de17c3
 edgible-cli: 1.4.6
@@ -12,6 +12,10 @@ steps:
   verify:
     stirling-pdf: pass
   teardown: pass
-duration: 10m
+measured:
+  stirling-pdf:
+    memory: 1.1 GB
+    images: 1.1 GB
+    data: 270 KB
+duration: 2m
 by: agent
-notes: Start took six minutes, nearly all of it the first download of the 1.1 GB image.
