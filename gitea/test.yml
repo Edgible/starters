@@ -14,5 +14,10 @@ steps:
     gitea: pass
     gitea-ssh: pass
   teardown: pass
+measured:
+  gitea:
+    memory: 151 MB
+    images: 184 MB
+    data: 56 MB
 duration: 3m
 by: agent

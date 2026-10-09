@@ -25,3 +25,10 @@ applications:
     published: true
     authModes: [none]
     place: gitea
+
+places:
+  gitea:
+    memory: 256 MB
+    disk: 1.5 GB
+    arch: [amd64, arm64]
+    gpu: none

@@ -14,7 +14,7 @@ Gitea shows its addresses in clone URLs, so `ROOT_URL` is `https://gitea.<ORG_LA
 
 To use it in a card, copy the `gitea` and `gitea-db` services, the two volumes, and the `GITEA_` lines. A CI runner joins it with a registration token from **Site Administration**, then **Actions**, then **Runners**.
 
-Repositories, attachments and settings live in the volume `gitea-data`, and users, issues and pull requests in `gitea-db-data`.
+Repositories, attachments and settings live in the volume `gitea-data`, and users, issues and pull requests in `gitea-db-data`. Minimum recommended for the place `gitea`: 256 MB of memory and 1.5 GB of disk, on an arm64 or amd64 machine, with no GPU.
 
 The Compose file is [docker-compose.yml](docker-compose.yml), the settings [card.env](card.env), the card [card.yml](card.yml), and the last test [test.yml](test.yml).
 
