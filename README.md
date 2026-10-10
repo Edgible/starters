@@ -72,6 +72,10 @@ Copy the services of each starter into your card's Compose file, and their lines
 
 The format and the tools are in [Edgible/card-kit](https://github.com/Edgible/card-kit). Every pull request runs `check-cards --fresh`, which fails a starter whose files changed since its `test.yml`: run `test-card` and commit the new one. The lifecycle tests run with `test-cards` on an Edgible serving device, from `main` only, never from a pull request. They write the status to the [`test-status` branch](https://github.com/Edgible/starters/tree/test-status) and never commit to `main`; a failing starter gets an issue.
 
+## Contributing
+
+How to add a starter, fix one, or ask for one is in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 [MIT](LICENSE). The apps a starter runs keep their own licenses.
