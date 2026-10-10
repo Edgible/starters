@@ -55,8 +55,23 @@ docker compose --env-file jellyfin/card.env -f jellyfin/docker-compose.yml ps
 `--wait` returns when each service is running, and healthy when it has a healthcheck. Then finish Jellyfin's setup wizard, before Publish, so it is never public. Until the wizard is finished, anyone who reaches Jellyfin can make the admin:
 
 ```bash
-set -a; . jellyfin/card.env; set +a
-B="http://127.0.0.1:$JELLYFIN_PORT"; H='Content-Type: application/json'
+sh jellyfin/prepare.sh
+```
+
+[prepare.sh](prepare.sh) is:
+
+```sh
+#!/bin/sh
+# Prepare for the jellyfin starter: finish Jellyfin's setup wizard, so it is never public.
+# Run it after Start and before Publish, from the directory that holds jellyfin/:
+#   sh jellyfin/prepare.sh
+set -eu
+cd "$(dirname "$0")"
+set -a; . ./card.env; set +a
+COMPOSE=${COMPOSE:-docker compose --env-file card.env -f docker-compose.yml}
+
+B="http://127.0.0.1:$JELLYFIN_PORT"
+H='Content-Type: application/json'
 curl -fsS -X POST "$B/Startup/Configuration" -H "$H" \
   -d '{"UICulture":"en-US","MetadataCountryCode":"US","PreferredMetadataLanguage":"en"}'
 curl -fsS "$B/Startup/User" >/dev/null

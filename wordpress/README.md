@@ -55,8 +55,22 @@ docker compose --env-file wordpress/card.env -f wordpress/docker-compose.yml ps
 `--wait` returns when each service is running, and healthy when it has a healthcheck. Then install WordPress, before Publish, so its install page is never public:
 
 ```bash
-set -a; . wordpress/card.env; set +a
-docker compose --env-file wordpress/card.env -f wordpress/docker-compose.yml --profile cli run --rm wordpress-cli \
+sh wordpress/prepare.sh
+```
+
+[prepare.sh](prepare.sh) is:
+
+```sh
+#!/bin/sh
+# Prepare for the wordpress starter: install WordPress, so its install page is never public.
+# Run it after Start and before Publish, from the directory that holds wordpress/:
+#   sh wordpress/prepare.sh
+set -eu
+cd "$(dirname "$0")"
+set -a; . ./card.env; set +a
+COMPOSE=${COMPOSE:-docker compose --env-file card.env -f docker-compose.yml}
+
+$COMPOSE --profile cli run --rm -T wordpress-cli \
   wp core install --url="${WORDPRESS_URL:-https://wordpress.$ORG_LABEL.edgible.com}" --title="My site" \
   --admin_user=admin --admin_password="$WORDPRESS_ADMIN_PASSWORD" --admin_email="$WORDPRESS_ADMIN_EMAIL" --skip-email
 ```

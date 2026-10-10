@@ -1,6 +1,6 @@
 tested: 2026-10-10
 result: pass
-card-kit: 2de17c3
+card-kit: 91044af
 edgible-cli: 1.4.6
 machine: darwin/arm64, docker 29.4.3
 images:
@@ -13,12 +13,14 @@ steps:
   verify:
     umami: pass
     analytics: pass
+  checks:
+    default-password-gone: pass
   teardown: pass
 measured:
   umami:
-    memory: 218 MB
+    memory: 255 MB
     images: 435 MB
     data: 50 MB
-duration: 3m
+duration: 4m
 by: agent
 notes: umami is taken in the test org, so it was published as test-umami.

@@ -57,8 +57,22 @@ docker compose --env-file gitea/card.env -f gitea/docker-compose.yml ps
 `--wait` returns when each service is running, and healthy when it has a healthcheck. Then make the admin, before Publish:
 
 ```bash
-set -a; . gitea/card.env; set +a
-docker compose --env-file gitea/card.env -f gitea/docker-compose.yml exec -u git gitea \
+sh gitea/prepare.sh
+```
+
+[prepare.sh](prepare.sh) is:
+
+```sh
+#!/bin/sh
+# Prepare for the gitea starter: make the admin.
+# Run it after Start and before Publish, from the directory that holds gitea/:
+#   sh gitea/prepare.sh
+set -eu
+cd "$(dirname "$0")"
+set -a; . ./card.env; set +a
+COMPOSE=${COMPOSE:-docker compose --env-file card.env -f docker-compose.yml}
+
+$COMPOSE exec -T -u git gitea \
   gitea admin user create --admin --username gitadmin \
   --password "$GITEA_ADMIN_PASSWORD" --email "$GITEA_ADMIN_EMAIL" --must-change-password=false
 ```

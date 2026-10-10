@@ -52,19 +52,38 @@ docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml up 
 docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml ps
 ```
 
-`--wait` returns when each service is running, and healthy when it has a healthcheck. The first start downloads the server and both plugins, which takes a minute or two. Then switch Geyser to Floodgate sign-in and add the players, before Publish:
+`--wait` returns when each service is running, and healthy when it has a healthcheck. The first start downloads the server and both plugins, which takes a minute or two. Then switch Geyser to Floodgate sign-in, before Publish:
 
 ```bash
-set -a; . minecraft/card.env; set +a
-docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml exec minecraft \
+sh minecraft/prepare.sh
+```
+
+[prepare.sh](prepare.sh) is:
+
+```sh
+#!/bin/sh
+# Prepare for the minecraft starter: switch Geyser to Floodgate sign-in, so Bedrock players sign in with Xbox.
+# Run it after Start and before Publish, from the directory that holds minecraft/:
+#   sh minecraft/prepare.sh
+set -eu
+cd "$(dirname "$0")"
+set -a; . ./card.env; set +a
+COMPOSE=${COMPOSE:-docker compose --env-file card.env -f docker-compose.yml}
+
+$COMPOSE exec -T minecraft \
   sed -i 's/auth-type: online/auth-type: floodgate/' /data/plugins/Geyser-Spigot/config.yml
-docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml restart minecraft
-docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml up -d --wait
+$COMPOSE restart minecraft
+$COMPOSE up -d --wait
+```
+
+Then add the players, yourself too:
+
+```bash
 docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml exec minecraft rcon-cli whitelist add <java-name>
 docker compose --env-file minecraft/card.env -f minecraft/docker-compose.yml exec minecraft rcon-cli fwhitelist add <gamertag>
 ```
 
-Add yourself too. `rcon-cli` sends a command to the running server, so adding a friend later needs no restart.
+`rcon-cli` sends a command to the running server, so adding a friend later needs no restart.
 
 ### 5. Publish
 
