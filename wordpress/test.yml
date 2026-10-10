@@ -1,6 +1,6 @@
 tested: 2026-10-10
 result: pass
-card-kit: 2de17c3
+card-kit: ab9addb
 edgible-cli: 1.4.6
 machine: darwin/arm64, docker 29.4.3
 images:
@@ -12,10 +12,12 @@ steps:
   publish: pass
   verify:
     wordpress: pass
+  checks:
+    admin-signs-in: pass
   teardown: pass
 measured:
   wordpress:
-    memory: 208 MB
+    memory: 206 MB
     images: 372 MB
     data: 292 MB
 duration: 3m

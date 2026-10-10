@@ -1,6 +1,6 @@
 tested: 2026-10-10
 result: pass
-card-kit: 1f9e653
+card-kit: ab9addb
 edgible-cli: 1.4.6
 machine: darwin/arm64, docker 29.4.3
 images:
@@ -13,12 +13,12 @@ steps:
     mc-java: pass
     mc-bedrock: skip
   checks:
-    java-public: pass
     bedrock-public: pass
+    java-public: pass
   teardown: pass
 measured:
   minecraft:
-    memory: 2.6 GB
+    memory: 2.7 GB
     images: 351 MB
     data: 309 MB
 duration: 3m

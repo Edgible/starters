@@ -1,6 +1,6 @@
 tested: 2026-10-10
 result: pass
-card-kit: 91044af
+card-kit: ab9addb
 edgible-cli: 1.4.6
 machine: darwin/arm64, docker 29.4.3
 images:
@@ -14,6 +14,8 @@ steps:
   publish: pass
   verify:
     immich: pass
+  checks:
+    admin-signs-in: pass
   teardown: pass
 measured:
   immich:
