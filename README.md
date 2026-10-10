@@ -2,7 +2,23 @@
 
 A starter is one self-hosted app, written as an Edgible card and tested end to end: Gitea, Umami, Vaultwarden, and so on. Starters are the pieces people build cards from. A [card](https://github.com/Edgible/cards) is a pattern, several apps wired together for a purpose; a starter is one of the apps, ready to drop into one.
 
-Starters are made by an agent and reviewed by a person before they are merged. Every starter carries `test.yml`, the result of its last full run on a real Edgible serving device.
+Starters are made by an agent and reviewed by a person before they are merged. Every starter carries `test.yml`, the result of a full run of that version on a real Edgible serving device, and has a status badge below that says whether it still passes.
+
+## The starters
+
+| Starter | What | Status |
+| --- | --- | --- |
+| [gitea](gitea) | Gitea, your own Git forge, with Git over HTTPS and SSH | [![gitea status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fgitea.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [immich](immich) | Immich, your photo and video library, for its phone apps and the web | [![immich status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fimmich.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [jellyfin](jellyfin) | Jellyfin, your films, shows and music, streamed to its apps and the web | [![jellyfin status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fjellyfin.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [minecraft](minecraft) | A Minecraft server for friends on PC over TCP and on phones over UDP, one world | [![minecraft status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fminecraft.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [stirling-pdf](stirling-pdf) | Stirling-PDF, the PDF toolbox, behind your org login | [![stirling-pdf status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fstirling-pdf.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [umami](umami) | Umami analytics, the dashboard behind org and the tracking script open | [![umami status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fumami.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [uptime-kuma](uptime-kuma) | Uptime Kuma, the uptime monitor, behind your org login | [![uptime-kuma status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fuptime-kuma.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [vaultwarden](vaultwarden) | Vaultwarden, a Bitwarden-compatible password server, for your own apps and browsers | [![vaultwarden status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fvaultwarden.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+| [wordpress](wordpress) | WordPress with MariaDB, installed before it goes public | [![wordpress status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEdgible%2Fstarters%2Ftest-status%2Fwordpress.json)](https://github.com/Edgible/starters/blob/test-status/status.json) |
+
+The status is the latest lifecycle test of each starter, on a real Edgible serving device, and the Edgible version it ran on. A starter is tested again when it changes and when Edgible releases a new version, so a green badge with the current version means it works today.
 
 ## What a starter is
 
@@ -53,7 +69,7 @@ Copy the services of each starter into your card's Compose file, and their lines
 
 ## Tools and tests
 
-The format and the tools are in [Edgible/card-kit](https://github.com/Edgible/card-kit). Every pull request runs `check-cards`. The full lifecycle tests run on a self-hosted runner labelled `edgible-test`, on an Edgible serving device, and only from workflows on `main`: never from a pull request.
+The format and the tools are in [Edgible/card-kit](https://github.com/Edgible/card-kit). Every pull request runs `check-cards --fresh`, which fails a starter whose files changed since its `test.yml`: run `test-card` and commit the new one. The lifecycle tests run with `test-cards` on an Edgible serving device, from `main` only, never from a pull request. They write the status to the [`test-status` branch](https://github.com/Edgible/starters/tree/test-status) and never commit to `main`; a failing starter gets an issue.
 
 ## License
 

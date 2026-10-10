@@ -1,7 +1,8 @@
 tested: 2026-10-10
 result: pass
-card-kit: 91044af
+card-kit: 68b9a2e
 edgible-cli: 1.4.6
+files: sha256:67a8bece78d842a4
 machine: darwin/arm64, docker 29.4.3
 images:
   - ghcr.io/umami-software/umami:3.4.0@sha256:85909afc45bdcda1917394594a087421fdbb05610fded0fa9f6fb861abb2f367

@@ -1,7 +1,8 @@
 tested: 2026-10-10
 result: pass
-card-kit: ab9addb
+card-kit: 68b9a2e
 edgible-cli: 1.4.6
+files: sha256:e0a0fb12ab72ca14
 machine: darwin/arm64, docker 29.4.3
 images:
   - gitea/gitea:28.1.0@sha256:f505a0d3a41323b786e05942fc7a4075e07ae7c169fd9485649aa55ee543a21a
@@ -18,7 +19,7 @@ steps:
   teardown: pass
 measured:
   gitea:
-    memory: 153 MB
+    memory: 152 MB
     images: 184 MB
     data: 56 MB
 duration: 3m

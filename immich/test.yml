@@ -1,7 +1,8 @@
 tested: 2026-10-10
 result: pass
-card-kit: ab9addb
+card-kit: 68b9a2e
 edgible-cli: 1.4.6
+files: sha256:d4be6c8efb82853f
 machine: darwin/arm64, docker 29.4.3
 images:
   - docker.io/valkey/valkey:9@sha256:c123e3715db63d06d4ad6964884037aa0d5d4d703939b9929954112889708e1d
@@ -21,6 +22,6 @@ measured:
   immich:
     memory: 2.2 GB
     images: 854 MB
-    data: 345 MB
+    data: 346 MB
 duration: 4m
 by: agent
