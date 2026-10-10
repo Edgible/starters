@@ -1,0 +1,56 @@
+{
+  "gitea": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:e0a0fb12ab72ca14"
+  },
+  "immich": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:d4be6c8efb82853f"
+  },
+  "jellyfin": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:497c096e2f4f4d84"
+  },
+  "minecraft": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:3f6bc8c11f152432"
+  },
+  "stirling-pdf": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:fd4ae185b27af7a0"
+  },
+  "umami": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:67a8bece78d842a4"
+  },
+  "uptime-kuma": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:58b7e8682dc2b03b"
+  },
+  "vaultwarden": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:739df358104ca6a6"
+  },
+  "wordpress": {
+    "result": "pass",
+    "tested": "2026-10-10",
+    "edgible-cli": "1.4.6",
+    "files": "sha256:a6df6f5e3e3eeb59"
+  }
+}
