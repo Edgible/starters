@@ -1,7 +1,8 @@
 tested: 2026-10-10
 result: pass
-card-kit: ab9addb
+card-kit: 68b9a2e
 edgible-cli: 1.4.6
+files: sha256:a6df6f5e3e3eeb59
 machine: darwin/arm64, docker 29.4.3
 images:
   - mariadb:11.8.9@sha256:6422478cb8e159f080fb1d8ccf65101e26fe51385787fde7d16c3b165a331f15
@@ -17,7 +18,7 @@ steps:
   teardown: pass
 measured:
   wordpress:
-    memory: 206 MB
+    memory: 213 MB
     images: 372 MB
     data: 292 MB
 duration: 3m

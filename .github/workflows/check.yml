@@ -20,4 +20,4 @@ jobs:
       - name: check-cards
         run: |
           # Nothing to check until the first starter lands.
-          if ls */card.yml >/dev/null 2>&1; then .card-kit/run check-cards; else echo "no starters yet"; fi
+          if ls */card.yml >/dev/null 2>&1; then .card-kit/run check-cards --fresh; else echo "no starters yet"; fi
