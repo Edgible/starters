@@ -1,5 +1,7 @@
 # immich
 
+> **Moved.** This starter is now the [immich app card](https://github.com/Edgible/cards/tree/main/immich) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Your photos and videos are the data people least want on someone else's servers, and the most expensive to keep there. [Immich](https://immich.app) is a photo and video library with phone apps that back up your camera roll, on a machine you own.

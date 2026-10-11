@@ -1,5 +1,7 @@
 # minecraft
 
+> **Moved.** This starter is now the [minecraft app card](https://github.com/Edgible/cards/tree/main/minecraft) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 A Minecraft server for friends usually means renting one, or opening a port on your router. This starter runs [Paper](https://papermc.io), a Java server, on a machine you own, with [Geyser and Floodgate](https://geysermc.org) so friends on phones and consoles join the same world as friends on PC. The guide [A game server on Edgible](https://guides.edgible.com/guides/game-server-on-edgible/index.html) walks through the same server step by step.

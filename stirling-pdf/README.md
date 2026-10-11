@@ -1,5 +1,7 @@
 # stirling-pdf
 
+> **Moved.** This starter is now the [stirling-pdf app card](https://github.com/Edgible/cards/tree/main/stirling-pdf) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Merging, splitting, compressing, converting, or reading the text out of a PDF usually means uploading it to someone's website. [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) does all of that on a machine you own, so the documents never leave it. This starter puts it behind your org login.

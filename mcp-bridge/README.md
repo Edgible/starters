@@ -1,5 +1,7 @@
 # mcp-bridge
 
+> **Moved.** This starter is now the [mcp-bridge app card](https://github.com/Edgible/cards/tree/main/mcp-bridge) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Most MCP servers speak stdio: the AI assistant starts them on the same computer, so they work on one laptop and nowhere else. This starter runs any stdio MCP server, from npm or PyPI, on a machine that stays on, next to the data or tools it reaches, and serves it over Streamable HTTP, so you and your team can use it from Claude Code and other MCP clients wherever you are. The bridge is [Supergateway](https://github.com/supercorp-ai/supergateway).

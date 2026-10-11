@@ -1,5 +1,7 @@
 # umami
 
+> **Moved.** This starter is now the [umami app card](https://github.com/Edgible/cards/tree/main/umami) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Knowing whether anyone reads your site usually means handing every visitor to an analytics company. [Umami](https://umami.is) counts page views without cookies or personal data, and keeps the database on a machine you own.
