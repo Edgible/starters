@@ -1,5 +1,7 @@
 # starters
 
+> **Moved.** Starters are now **app cards** in [Edgible/cards](https://github.com/Edgible/cards), tested there every night. This repo is archived: its files stay so old links and fetch commands keep working, but they are no longer updated or tested.
+
 A starter is one self-hosted app, written as an Edgible card and tested end to end: Gitea, Umami, Vaultwarden, and so on. Starters are the pieces people build cards from. A [card](https://github.com/Edgible/cards) is a pattern, several apps wired together for a purpose; a starter is one of the apps, ready to drop into one.
 
 Starters are made by an agent and reviewed by a person before they are merged. Every starter carries `test.yml`, the result of a full run of that version on a real Edgible serving device, and has a status badge below that says whether it still passes.

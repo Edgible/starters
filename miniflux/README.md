@@ -1,5 +1,7 @@
 # miniflux
 
+> **Moved.** This starter is now the [miniflux app card](https://github.com/Edgible/cards/tree/main/miniflux) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Following sites and blogs usually means a hosted reader that tracks what you read, or an inbox full of newsletters. [Miniflux](https://miniflux.app) is a minimalist feed reader that fetches RSS, Atom and JSON feeds itself and keeps your subscriptions and read state in a database on a machine you own.

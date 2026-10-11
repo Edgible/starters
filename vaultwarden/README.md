@@ -1,5 +1,7 @@
 # vaultwarden
 
+> **Moved.** This starter is now the [vaultwarden app card](https://github.com/Edgible/cards/tree/main/vaultwarden) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 A password manager is the one service whose data you most want on a machine you own. [Vaultwarden](https://github.com/dani-garcia/vaultwarden) is a small server that the official Bitwarden apps, browser extensions and web vault all talk to.

@@ -1,5 +1,7 @@
 # jellyfin
 
+> **Moved.** This starter is now the [jellyfin app card](https://github.com/Edgible/cards/tree/main/jellyfin) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Films, shows and music you already own shouldn't need a subscription to watch. [Jellyfin](https://jellyfin.org) is a free media server that streams your own library to its TV, phone and desktop apps and to any browser, from a machine you own.

@@ -1,5 +1,7 @@
 # gitea
 
+> **Moved.** This starter is now the [gitea app card](https://github.com/Edgible/cards/tree/main/gitea) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Code, issues and reviews usually live on someone else's forge. [Gitea](https://about.gitea.com) is a light, complete Git forge (repositories, issues, pull requests, packages, and CI with its runner) that runs on a machine you own.

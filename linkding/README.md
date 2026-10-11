@@ -1,5 +1,7 @@
 # linkding
 
+> **Moved.** This starter is now the [linkding app card](https://github.com/Edgible/cards/tree/main/linkding) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 Bookmarks kept in one browser's sync are tied to that browser and that company. [linkding](https://github.com/sissbruecker/linkding) is a small, fast bookmark manager with tags, search, and a browser extension, that keeps your bookmarks on a machine you own.

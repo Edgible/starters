@@ -1,5 +1,7 @@
 # wordpress
 
+> **Moved.** This starter is now the [wordpress app card](https://github.com/Edgible/cards/tree/main/wordpress) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 WordPress runs a large share of the web, and most of it sits with a host you pay every month. [WordPress](https://wordpress.org) runs just as well on a machine you own, with the database beside it.

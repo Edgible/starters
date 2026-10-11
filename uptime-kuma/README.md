@@ -1,5 +1,7 @@
 # uptime-kuma
 
+> **Moved.** This starter is now the [uptime-kuma app card](https://github.com/Edgible/cards/tree/main/uptime-kuma) in Edgible/cards. Use that one: this copy is archived and no longer updated or tested.
+
 ## Why
 
 You want to know your sites and services are up before your users tell you. [Uptime Kuma](https://github.com/louislam/uptime-kuma) checks them on a schedule, alerts you through dozens of channels, and draws status pages, from a machine you own. This starter puts its interface behind your org login.
